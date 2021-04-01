@@ -1,0 +1,606 @@
+@import "fix.scss";
+@import "setari.scss";
+@import "mixin.scss";
+
+$culprimara: #bfa008;
+$culsecundara: #736005;
+$cultri: #493e03;
+header {
+  background-color: #fff;
+  max-height: 500px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  opacity: 0.7;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background: $cultri;
+  mix-blend-mode: overlay;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.superhead {
+  padding: 0;
+  background-color: $culprimara;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+
+  p {
+    margin-bottom: 0;
+    padding: 5px 0;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+    a {
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+    }
+  }
+  p:hover {
+    box-shadow: inset 1px 1px 10px #fff;
+  }
+}
+
+/*Fixare continut*/
+
+.continut2 {
+  position: absolute;
+  width: 100%;
+  max-height: 100vh;
+  margin: auto;
+  padding: 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*PArtea stanga*/
+
+.stanga {
+  object-fit: cover;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100px;
+  left: 0;
+  top: 0;
+  padding: 300px 0 0 70px;
+  h1 {
+    width: 100%;
+    text-align: justify;
+    font-size: 6.5vw;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 5px #111;
+  }
+  h2 {
+    width: 100%;
+    text-align: justify;
+    font-size: 2.5vw;
+    color: #fff;
+    text-shadow: 3px 3px 5px #111;
+    margin-bottom: 30px;
+  }
+  a {
+    width: 100%;
+    font-size: 1vw;
+    color: #111;
+    background-color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #111;
+  }
+  a:hover {
+    background-color: $culprimara;
+    color: #fff;
+  }
+}
+
+/*Buton de info fixed*/
+
+body .butonas {
+  position: fixed;
+  z-index: 1400;
+  bottom: 50px;
+  left: 30px;
+}
+
+/*Animatie telefon mai jos*/
+
+.telefon {
+  background: linear-gradient(top, lighten($culprimara, 50%), $culprimara);
+  padding: 10px;
+  position: fixed;
+  display: inline-block;
+  right: 30px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: 200% 200%;
+  animation: colorat 3s linear infinite;
+  -webkit-animation: colorat 3s linear infinite;
+
+  img {
+    max-width: 50px;
+    max-height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotire 2s 10 forwards alternate;
+    -webkit-animation: rotire 2s 10 forwards alternate;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes colorat {
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+@-webkit-keyframes colorat {
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+@keyframes rotire {
+  0% {
+    transform: rotate(-30deg);
+  }
+  33% {
+    transform: rotate(30deg) scale(1.05);
+  }
+  66% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg) scale(1.05);
+  }
+}
+
+@-webkit-keyframes rotire {
+  0% {
+    transform: rotate(-30deg);
+  }
+  33% {
+    transform: rotate(30deg) scale(1.05);
+  }
+  66% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg) scale(1.05);
+  }
+}
+
+/* NAVIGATIE MAI JOS  */
+
+.navigatie {
+  position: absolute;
+  max-width: 100%;
+  max-height: 0;
+  text-align: center;
+  right: 0;
+  top: 0;
+  padding: 120px 80px 0 0;
+  ul {
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  a {
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    color: #fff;
+    font-size: 1.3vw;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: 0.1s all ease-in-out;
+  }
+  a:hover {
+    border-radius: 50px;
+    background-color: $culprimara;
+    color: #fff;
+    box-shadow: 1px 1px 5px #111;
+  }
+}
+
+/*Formular mai jos*/
+
+.formular {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+  h2 {
+    color: #fff;
+    text-shadow: 3px 3px 3px #111;
+  }
+
+  input,
+  select {
+    font-size: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="telefon"],
+  textarea,
+  fieldset {
+    width: 100%;
+    height: 40px;
+    display: block;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 3px solid $culprimara;
+    background-color: #fff;
+    color: #111;
+    font-weight: bold;
+    transition: 0.1s all ease-in-out;
+  }
+
+  input[type="text"]:hover,
+  input[type="text"]:focus,
+  input[type="email"]:hover,
+  input[type="email"]:focus,
+  input[type="telefon"]:hover,
+  input[type="telefon"]:focus,
+  textarea:hover,
+  textarea:focus,
+  fieldset:hover,
+  fieldset:focus {
+    background-color: #111;
+    color: #fff;
+    transform: scale(1.02);
+    outline: none;
+  }
+
+  input[type="radio"] {
+    text-align: center;
+  }
+
+  fieldset {
+    .barbat,
+    .femeie {
+      padding: 0 40px;
+    }
+  }
+
+  textarea {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  input[type="submit"] {
+    background-color: $culprimara;
+    color: #111;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+    transition: 0.1s all ease-in-out;
+  }
+  input[type="submit"]:hover {
+    color: #fff;
+    transform: scale(1.05);
+    outline: none;
+  }
+}
+
+/*Responsive web mai jos*/
+
+@media only screen and (max-width: 1024px) {
+  .stanga {
+    padding: 200px 0 0 20px;
+  }
+  .navigatie {
+    padding: 70px 20px 0 0;
+    ul {
+      margin: 0;
+    }
+
+    .formular {
+      margin: 30px auto;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="telefon"],
+    textarea,
+    fieldset {
+      height: 30px;
+    }
+    textarea {
+      height: 50px;
+    }
+
+    fieldset {
+      height: 40px;
+    }
+  }
+
+  .telefon {
+    width: 30px;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    img {
+      width: 30px;
+      height: 30px;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  video,
+  .overlay {
+    height: 150%;
+  }
+}
+
+@include smallgrid {
+  .continut1 {
+    padding: 0 25px;
+  }
+
+  .navigatie {
+    padding: 220px 20px;
+    top: 0;
+    right: 0;
+    left: 0;
+    ul {
+      margin: 25px 0 25px 0;
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .stanga {
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 70px 40px;
+    text-align: center;
+    z-index: 1000;
+
+    h1 {
+      font-size: 50px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      text-align: center;
+    }
+    a {
+      font-size: 10px;
+    }
+  }
+
+  video,
+  .overlay {
+    height: 180%;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+/* GRID MAI JOS  */
+
+.row {
+  margin-right: -20px;
+}
+.col {
+  float: left;
+  width: 100%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+@include smallgrid {
+  .col-sm-12 {
+    width: 100%;
+  }
+  .col-sm-11 {
+    width: 91.662%;
+  }
+  .col-sm-10 {
+    width: 83.332%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-8 {
+    width: 66.662%;
+  }
+  .col-sm-7 {
+    width: 58.331%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-5 {
+    width: 41.662%;
+  }
+  .col-sm-4 {
+    width: 33.332%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-2 {
+    width: 16.662%;
+  }
+  .col-sm-1 {
+    width: 8.332%;
+  }
+}
+
+@include mediumgrid {
+  .row {
+    margin-right: -40px;
+  }
+  .col {
+    padding-right: 40px;
+  }
+
+  .continut-total {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .continut-total p {
+    font-size: 90%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+  .col-md-11 {
+    width: 91.662%;
+  }
+  .col-md-10 {
+    width: 83.332%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-8 {
+    width: 66.662%;
+  }
+  .col-md-7 {
+    width: 58.331%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-5 {
+    width: 41.662%;
+  }
+  .col-md-4 {
+    width: 33.332%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-2 {
+    width: 16.662%;
+  }
+  .col-md-1 {
+    width: 8.332%;
+  }
+}
+
+@include biggrid {
+  .row {
+    margin-right: -40px;
+  }
+  .col {
+    padding-right: 40px;
+  }
+
+  .continut-total {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .continut-total p {
+    font-size: 90%;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+  .col-lg-11 {
+    width: 91.662%;
+  }
+  .col-lg-10 {
+    width: 83.332%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-8 {
+    width: 66.662%;
+  }
+  .col-lg-7 {
+    width: 58.331%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-5 {
+    width: 41.662%;
+  }
+  .col-lg-4 {
+    width: 33.332%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-2 {
+    width: 16.662%;
+  }
+  .col-lg-1 {
+    width: 8.332%;
+  }
+}

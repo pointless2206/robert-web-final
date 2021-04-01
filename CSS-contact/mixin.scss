@@ -1,0 +1,58 @@
+@mixin verticalgrad($primacul, $seccul) {
+  background-color: $seccul; /* Fallback Color */
+  background-image: -webkit-gradient(
+    linear,
+    top,
+    bottom,
+    from($primacul),
+    to($seccul)
+  ); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    $primacul,
+    $seccul
+  ); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(
+    to bottom,
+    $primacul,
+    $seccul
+  ); /* FF3.6 */
+  background-image: -ms-linear-gradient(
+    to bottom,
+    $primacul,
+    $seccul
+  ); /* IE10 */
+  background-image: -o-linear-gradient(
+    to bottom,
+    $primacul,
+    $seccul
+  ); /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, $primacul, $seccul);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$primacul}', EndColorStr='#{$seccul}');
+}
+
+/* Media  Screen Helper */
+
+@mixin smallgrid {
+  @media only screen and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin mediumgrid {
+  @media only screen and (min-width: 701px) {
+    @content;
+  }
+}
+
+@mixin biggrid {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin largegrid {
+  @media only screen and (min-width: 1400px) {
+    @content;
+  }
+}

@@ -1,0 +1,22 @@
+html {
+  margin-top: -16px;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body p {
+  letter-spacing: 1.8px;
+  text-indent: 10px;
+  line-height: 160%;
+}
+/*# sourceMappingURL=setari.css.map */

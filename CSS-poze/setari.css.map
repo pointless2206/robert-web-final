@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,KAAK;EACjB,WAAW,EAAE,iBAAiB;CAC/B;;AACD,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAMpB;;AAVD,AAKE,IALE,CAKF,CAAC,CAAC;EACA,cAAc,EAAE,KAAK;EACrB,WAAW,EAAE,IAAI;EACjB,WAAW,EAAE,IAAI;CAClB",
+    "sources": [
+        "setari.scss"
+    ],
+    "names": [],
+    "file": "setari.css"
+}

@@ -1,0 +1,123 @@
+    <!DOCTYPE html>
+
+    <html>
+        <head>
+
+            <meta charset="utf-8">
+            <title> New York City </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="CSS-contact/screen-contact.css">
+            <script type="text/javascript" src="JS/jquery.js"></script>
+            <script type="text/javascript" src="JS/cycle2.js"></script>
+            <!-- CSS only -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">    
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        
+        </head>
+    
+        <body>  
+    
+            <header>
+                
+                <div class="superhead">
+                    <p><a href="https://www.nycgo.com/coronavirus-information-and-resources-for-travelers/" target="_blank">Informatii de ultima ora legate de Covid-19</a></p>
+                </div>
+    
+    
+            </header>
+
+            <video src="video/videonyc.mp4" muted loop autoplay repeat-on-scroll ></video>
+
+
+            <div class="overlay"></div>
+    
+    
+            <div class="continut2">
+
+                <div class="stanga">
+                    <h1 >New York City</h1>
+
+                    <h2 > Formular contact</h2>
+
+                    <a href="final-acasa.html">EXPLORE</a>
+
+                </div>
+
+                <nav class="navigatie">
+
+                    <ul>
+                        <li><a href="final-acasa.html"><strong>Acasa</strong></a></li>
+                        <li><a href="final-despre.html"><strong>Despre</strong></a></li>
+                        <li><a href="final-poze.html"><strong>Poze</strong></a></li>
+                        <li><a href="final-contact.html"><strong>Contact</strong></a></li>
+                    </ul>
+
+                    <div class="formular">
+
+                        <h2>Formular de contact</h2>
+    
+                      <form>
+    
+                            <label for="nume"></label>
+                            <input id="nume" type="text" name="nume" placeholder="Nume">
+    
+                            <label for="prenume" ></label>
+                            <input id="prenume" type="text" name="nume" placeholder="Prenume">
+    
+                            <label for="email" ></label>
+                            <input id="email" type="email" name="email" placeholder="E-mail">
+    
+                            <label  for="tel" ></label>
+                            <input  id="tel" type="telefon" name="tel" placeholder="Telefon">
+    
+                            <label for="msj" ></label>
+                            <textarea id="msj" name="msj" placeholder="Mesaj"></textarea>
+    
+                            <fieldset>
+                                <input type="radio" id="man" name="man" value="man"><label for="man" ><span class="barbat">Barbat</span></label>
+                                <input type="radio" id="woman" name="woman" value="woman"><label for="woman"><span class="femeie">Femeie</span></label>
+                            </fieldset>
+    
+                            <input type="submit" value="Trimite">
+    
+                        </form>
+
+                    </div>
+
+                </nav>
+
+
+                <div class="fix"></div>
+
+            </div>          <!-- aici se inchide continut2-->
+    
+    
+                <div class="telefon">
+                    <a href=""> 
+                        <img src="poze/tlf.png" alt="telefon">
+                    </a>      
+                </div>
+            
+    
+    
+                <div class="butonas hidden">
+                    <button type="button" class="btn  btn-warning" data-toggle="popover" data-placement="left" title="Telefon rapid: 0732xxxxxx" data-content=" 0723 xxxx xxx">Info</button>
+                </div>
+            
+    
+                    <script>
+                        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
+                        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                        return new bootstrap.Popover(popoverTriggerEl)
+                        })
+                        var popover = new bootstrap.Popover(document.querySelector('.butonas'), {
+                        container: 'body'
+                        })
+                    </script>
+    
+    
+        </body>
+    
+    </html>
+                
